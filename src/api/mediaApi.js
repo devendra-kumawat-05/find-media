@@ -19,11 +19,8 @@ export async function fetchVideos(query, page = 1, per_page = 20) {
     headers: { Authorization: PEXELS_KEY },
   });
 
-  console.log(res.data);
-
-  //   return res.data;
+  return res.data;
 }
-
 
 export async function fetchGiphy(query, page = 1, per_page = 20) {
   const res = await axios.get("https://api.giphy.com/v1/gifs/search", {
@@ -37,7 +34,5 @@ export async function fetchGiphy(query, page = 1, per_page = 20) {
     },
   });
 
-  console.log(res.data);
-
-  //   return res.data;
+  return res.data;
 }
